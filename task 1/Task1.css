@@ -1,0 +1,243 @@
+/* Imported fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&family=Protest+Guerrilla&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #e9e9e9; 
+  color: #333;
+}
+
+header {
+  background-color: #e0e0e0;
+  padding: 50px 0;
+  text-align: center;
+  position: relative;
+}
+
+header img {
+  border-radius: 50%;
+  width: 200px; 
+}
+
+nav {
+  margin-top: 80px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 50px;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.article-header h1 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: 4em; 
+  margin-bottom: 10px;
+}
+
+.article-header p {
+  font-size: 1.5em; 
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.article-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.article-content .col {
+  width: 32%;
+}
+
+.article-content h2 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.article-content p {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Albums grid layout */
+.albums {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.album-feature, .album {
+  background-color: #e0e0e0;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+
+.album-feature {
+  grid-column: span 2; 
+}
+
+/* Album images */
+#album-feature {
+  background-image: url('imaget1/eulogy-for-evolution.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#album1 {
+  background-image: url('imaget1/all-encores.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#album2 {
+  background-image: url('imaget1/articulation.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#album3 {
+  background-image: url('imaget1/blurred.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#album4 {
+  background-image: url('imaget1/encores-2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Author Section */
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    flex-direction: row-reverse;
+  }
+  
+  .author img {
+    width: 200px; 
+    height: 200px;
+    border-radius: 50%;
+    margin-left: 20px; 
+  }
+  
+  .author div {
+    font-size: 16px;
+  }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #14181d;
+  color: white;
+  font-size: 14px;
+}
+
+/*desktop layout*/
+@media (max-width: 1024px) {
+  header img {
+    width: 80px; 
+  }
+  .container {
+    padding: 30px; 
+  }
+  .article-header h1 {
+    font-size: 3em; 
+  }
+  .article-content h2 {
+    font-size: 2em; 
+  }
+}
+
+/*tablet layout*/
+@media (max-width: 720px) {
+  .container {
+    padding: 20px; 
+  .albums {
+    grid-template-columns: 1fr 1fr; 
+  }
+  .albums {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+  }
+
+  .album-feature {
+    grid-column: span 1; 
+  }
+  .author {
+    flex-direction: column; 
+    text-align: center; 
+  }
+  .author img {
+    margin: 0 auto 20px auto; 
+  }
+  .author div {
+    text-align: center; 
+  }
+  .article-content {
+    flex-direction: column; 
+    gap: 20px; 
+  }
+
+  .article-content .col {
+    width: 100%; 
+  }
+}
+}
+
+/*mobile layout*/
+@media (max-width: 540px) {
+  .container {
+    padding: 12px; 
+  }
+  .article-header h1 {
+    font-size: 2em;
+  }
+  .article-content .col {
+    font-size: 14px; 
+  }
+ .album-feature, .album {
+    height: 120px; 
+  }
+  .author img {
+    width: 100px; 
+    height: 100px;
+  }
+  .author div {
+    font-size: 14px; 
+  }
+}
